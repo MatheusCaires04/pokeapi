@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <title>PokeAPI - Seu POKEMON favorito</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box__form">
+        <h1 class="title">PokémonAPI</h1>
+        <h3 class="sub__title">Veja os dados de seu POKÉMON favorito</h3>
+        <form action="">
+          <input
+            type="text"
+            placeholder="Digite o nome ou número de algum POKÉMON"
+            name="poke"
+            id="poke"
+            class="poke"
+            autocomplete="off"
+          />
+          <input type="submit" value="Buscar POKÉMON" />
+        </form>
+      </div>
+      <div class="data"></div>
+    </div>
+
+    <script src="script/app.js"></script>
+  </body>
+</html>

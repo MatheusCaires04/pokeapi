@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600&family=Roboto:wght@300;400;500;700;900&family=Rubik+Moonrocks&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --yellow-dark: #c7a008;
+  --yellow: #ffcb05;
+  --blue-dark: #3c5aa6;
+  --blue: #2a75bb;
+  --blue-hover: #2a75bbce;
+  --white: #fff;
+  --bg: #ffcd05a1;
+  --black: #000;
+  --data-card: rgba(0, 0, 0, 0.869);
+  --font-global: 1rem;
+  --font: 16px;
+  --font-medium: 13px;
+  --font-small: 10px;
+  --font-roboto: "Roboto";
+  --font-edunsw: "Edu NSW ACT Foundation";
+  --font-rubik: "Rubik Moonrocks";
+}
+
+html {
+  font-size: var(--font);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+}
+
+.box__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--yellow-dark);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 20px var(--black);
+}
+
+.box__form .title {
+  font-size: 4rem;
+  font-family: var(--font-rubik);
+  color: var(--blue-dark);
+  text-shadow: 0 3px 3px var(--black);
+}
+
+.box__form .sub__title {
+  font-size: 2rem;
+  font-family: var(--font-edunsw);
+  font-weight: 600;
+}
+
+.box__form form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.box__form form input {
+  font-weight: 600;
+  font-family: var(--font-roboto);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.box__form form input[type="text"] {
+  background-color: var(--white);
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+.box__form form input[type="text"]::placeholder {
+  font-size: 1rem;
+  text-transform: none;
+}
+
+.box__form form input[type="submit"] {
+  background-color: var(--blue);
+  font-size: 1.3rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box__form form input[type="submit"]:hover {
+  background-color: var(--blue-hover);
+  color: var(--black);
+}
+
+.data {
+  position: absolute;
+  display: none;
+  width: 50%;
+  height: 90%;
+  background-color: var(--data-card);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn__close {
+  position: absolute;
+  font-size: 40px;
+  font-family: var(--font-rubik);
+  color: var(--white);
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.active {
+  display: flex;
+}
+
+.poke__name,
+.poke__id {
+  font-size: 2rem;
+  font-family: var(--font-edunsw);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.poke__name strong,
+.poke__id strong {
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.poke__image {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: var(--font-medium);
+  }
+
+  .data {
+    width: 90%;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: var(--font-small);
+  }
+}
